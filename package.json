@@ -1,6 +1,6 @@
 {
   "name": "@huxy/layout",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "title": "layout",
   "feature": "0.0.1",
   "hooks": "0.0.1",
@@ -19,6 +19,9 @@
   },
   "license": "MIT",
   "devDependencies": {},
+  "peerDependencies": {
+    "react": ">=17.0.0"
+  },
   "directories": {
     "lib": "lib"
   },
