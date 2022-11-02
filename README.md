@@ -5,7 +5,6 @@
 [![Build Status](https://api.travis-ci.com/ahyiru/layout.svg?branch=master)](https://app.travis-ci.com/github/ahyiru/layout)
 [![](https://img.shields.io/badge/blog-ihuxy-blue.svg)](http://ihuxy.com/)
 
-
 ### 功能
 
 该 `layout` 框架是传统的中后台 `layout` 模板，提供了头部导航栏、菜单栏、底部栏、logo、面包屑等。
@@ -26,4 +25,4 @@
 - headerStyle、asideStyle、menuStyle、contentStyle：样式。
 - handleNavClick：导航栏点击事件。
 - leftList、rightList：左侧导航栏、右侧导航栏配置。
-- logo、title、iconList、Link：logo、标题、图标、Link组件 注入。
+- logo、title、Link：logo、标题、Link 组件 注入。
