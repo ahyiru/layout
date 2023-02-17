@@ -18,7 +18,7 @@
 
 常用配置：
 
-- menuType: sideMenu | navMenu, 默认 sideMenu。横纵菜单配置。
+- menuType: vertical | horizontal | compose, 默认 vertical。横纵菜单配置。
 - MenuBottom：菜单底部内容
 - MainTop：主页顶部内容。如：面包屑。
 - Footer：页面底部内容。
@@ -26,3 +26,4 @@
 - handleNavClick：导航栏点击事件。
 - leftList、rightList：左侧导航栏、右侧导航栏配置。
 - logo、title、Link：logo、标题、Link 组件 注入。
+- menuAnimate: Boolean | String, 默认 false。
