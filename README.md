@@ -27,3 +27,70 @@
 - leftList、rightList：左侧导航栏、右侧导航栏配置。
 - logo、title、Link：logo、标题、Link 组件 注入。
 - menuAnimate: Boolean | String, 默认 false。
+
+### nav configs
+
+```javascript
+export const leftNav = () => {
+  const left = getIntls('nav.left', {});
+  return [
+    {
+      key: 'collapse',
+      name: left?.collapse ?? 'collapse',
+      type: 'collapse',
+      smShow: true,
+      Custom: props => <CustomCollapse {...props} />,
+    },
+    {
+      key: 'projectList',
+      name: left?.projectList ?? 'projectList',
+      type: 'projectList',
+      arrowDir: 'lt',
+      Ricon: true,
+      children: [
+        {
+          key: 'API文档',
+          name: left?.apis ?? 'API文档',
+          icon: <Icon icon="ApiOutlined" />,
+          type: 'link',
+          link: 'http://ihuxy.com:8010',
+        },
+      ],
+    },
+    {
+      key: 'wechat',
+      title: 'wechat',
+      icon: <Icon icon="WechatOutlined" />,
+      arrowDir: 'lt',
+      ChildRender: item => (
+        <div className="follow-me">
+          <img src={wx} alt="wechat" />
+          <p>{left?.followMe ?? 'followMe'}：yiru_js</p>
+        </div>
+      ),
+    },
+    {
+      key: 'configs',
+      icon: <Icon icon="ToolOutlined" />,
+      type: 'configs',
+      smShow: true,
+      Custom: props => <Settings {...props} />,
+    },
+    {
+      key: 'search',
+      title: left?.search ?? '搜索',
+      Custom: props => <Search {...props} />,
+    },
+  ];
+};
+```
+
+- key: 标识符
+- name: 展示名
+- type: 类型
+- title: tooltop 展示信息
+- icon: 图标
+- smShow: 小屏是否展示，默认不展示
+- Custom: 自定义组件
+- ChildRender: 自定义渲染
+- children: 下拉子菜单配置
