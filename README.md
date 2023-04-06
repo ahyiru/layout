@@ -90,6 +90,7 @@ export const leftNav = () => {
 - type: 类型
 - title: tooltop 展示信息
 - icon: 图标
+- img: 自定义图标
 - smShow: 小屏是否展示，默认不展示
 - Custom: 自定义组件
 - ChildRender: 自定义渲染
